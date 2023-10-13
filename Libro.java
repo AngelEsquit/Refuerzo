@@ -14,5 +14,11 @@ public class Libro extends Item {
 
     public String getEditorial() {
         return editorial;
-    }   
+    }
+
+    @Override
+    public String toString() {
+        return "Número de identificación: " + num + "\nTítulo: " + titulo + "\nMateria: " + materia + "\nCantidad: " + cantidad
+                + "\nEstado: " + estado + "\nAutor: " + autor + "\nEditorial: " + editorial;
+    }
 }
