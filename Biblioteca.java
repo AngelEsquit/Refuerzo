@@ -203,6 +203,10 @@ public class Biblioteca {
                     items.get(opcion).setEstado("Agotado");
 
                     break;
+
+                case 7:
+                    salir = 0;
+                    break;
                 default:
                     System.out.println("");
                     System.out.println("Número inválido. Intente nuevamente.");
