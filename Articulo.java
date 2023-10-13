@@ -1,11 +1,12 @@
 public class Articulo extends Item {
-    private String autor;
+    private final String autor;
+
+    public Articulo(int num, String titulo, String materia, int cantidad, String estado, String autor) {
+        super(num, titulo, materia, cantidad, estado);
+        this.autor = autor;
+    }
 
     public String getAutor() {
         return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 }
