@@ -9,4 +9,10 @@ public class Articulo extends Item {
     public String getAutor() {
         return autor;
     }
+
+    @Override
+    public String toString() {
+        return "Número de identificación: " + num + "\nTítulo: " + titulo + "\nMateria: " + materia + "\nCantidad: " + cantidad
+                + "\nEstado: " + estado +"\nAutor: " + autor;
+    }
 }
