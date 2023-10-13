@@ -33,6 +33,7 @@ public class Biblioteca {
 
             switch (opcion) {
                 case 1:
+                    opcion = 0;
                     printMenu2();
 
                     try {
@@ -46,6 +47,8 @@ public class Biblioteca {
 
                     switch (opcion) {
                         case 1:
+                            opcion = 0;
+
                             System.out.println("Ingrese el número del libro:");
                             num = scanner.nextInt();
                             scanner.nextLine();
@@ -67,12 +70,61 @@ public class Biblioteca {
                             editorial = scanner.nextLine();
 
                             items.add(new Libro(num, titulo, materia, cantidad, estado, autor, editorial));
+
+                        case 2:
+                            System.out.println("Ingrese el número de la revista:");
+                            num = scanner.nextInt();
+                            scanner.nextLine();
+                    
+                            System.out.println("Ingrese el título de la revista:");
+                            titulo = scanner.nextLine();
+                    
+                            System.out.println("Ingrese la materia de la revista:");
+                            materia = scanner.nextLine();
+                    
+                            System.out.println("Ingrese la cantidad de revistas:");
+                            cantidad = scanner.nextInt();
+                            scanner.nextLine();
+                    
+                            System.out.println("Ingrese el estado de la revista:");
+                            estado = scanner.nextLine();
+                    
+                            System.out.println("Ingrese el año de la revista:");
+                            anio = scanner.nextInt();
+                            scanner.nextLine();
+
+                            items.add(new Revista(num, titulo, materia, cantidad, estado, anio));
+
+                        case 3:
+                            System.out.println("Ingrese el número del artículo:");
+                            num = scanner.nextInt();
+                            scanner.nextLine();
+                    
+                            System.out.println("Ingrese el título del artículo:");
+                            titulo = scanner.nextLine();
+                    
+                            System.out.println("Ingrese la materia del artículo:");
+                            materia = scanner.nextLine();
+                    
+                            System.out.println("Ingrese la cantidad de artículos:");
+                            cantidad = scanner.nextInt();
+                            scanner.nextLine();
+                    
+                            System.out.println("Ingrese el estado del artículo:");
+                            estado = scanner.nextLine();
+                    
+                            System.out.println("Ingrese el autor del artículo:");
+                            autor = scanner.nextLine();
+
+                            items.add(new Articulo(num, titulo, materia, cantidad, estado, autor));
                     }
 
                     break;
                 case 2:
+                    opcion = 0;
                     break;
                 case 3:
+                    opcion = 0;
                     break;
                 default:
                     System.out.println("");
