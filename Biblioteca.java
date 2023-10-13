@@ -10,7 +10,7 @@ public class Biblioteca {
         int opcion = 0;
 
         while (salir != 0) {
-            printMenu();
+            printMenu1();
             try {
                 opcion = scanner.nextInt();
                 scanner.nextLine();
@@ -47,7 +47,7 @@ public class Biblioteca {
         }
     }
 
-    public static void printMenu() {
+    public static void printMenu1() {
         System.out.println("");
         System.out.println("");
         System.out.println("*************************************");
