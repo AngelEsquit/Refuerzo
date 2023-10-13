@@ -9,4 +9,10 @@ public class Revista extends Item {
     public int getAnio() {
         return anio;
     }
+
+    @Override
+    public String toString() {
+        return "Número de identificación: " + num + "\nTítulo: " + titulo + "\nMateria: " + materia + "\nCantidad: " + cantidad
+                + "\nEstado: " + estado + "\nAño: " + anio;
+    }
 }
