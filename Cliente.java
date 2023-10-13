@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Cliente {
     private int num;
     private String nombre;
     private String direccion;
     private int prestamos;
+    private ArrayList<Item> prestamosh;
 
     public int getNum() {
         return num;
@@ -34,5 +37,13 @@ public class Cliente {
 
     public void setPrestamos(int prestamos) {
         this.prestamos = prestamos;
+    }
+
+    public void setPrestamosh(ArrayList<Item> prestamosh) {
+        this.prestamosh = prestamosh;
+    }
+
+    public ArrayList<Item> getPrestamosh() {
+        return prestamosh;
     }
 }
