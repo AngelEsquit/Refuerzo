@@ -200,6 +200,8 @@ public class Biblioteca {
                     }
 
                     opcion = scanner.nextInt();
+                    scanner.nextLine();
+                    
                     items.get(opcion).setEstado("Agotado");
 
                     break;
