@@ -188,7 +188,21 @@ public class Biblioteca {
                     break;
 
                 case 6:
-                
+                    opcion = 0;
+                    contador = 1;
+
+                    System.out.println("");
+                    System.out.println("Ingrese la opción que desee.");
+
+                    for (Item item : items) {
+                        System.out.println(contador + ": " + item.getTitulo());
+                        contador += 1;
+                    }
+
+                    opcion = scanner.nextInt();
+                    items.get(opcion).setEstado("Agotado");
+
+                    break;
                 default:
                     System.out.println("");
                     System.out.println("Número inválido. Intente nuevamente.");
