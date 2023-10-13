@@ -36,4 +36,10 @@ public class Item {
     public String getEstado() {
         return estado;
     }
+
+    @Override
+    public String toString() {
+        return "Número de identificación: " + num + "\nTítulo: " + titulo + "\nMateria: " + materia + "\nCantidad: " + cantidad
+                + "\nEstado: " + estado;
+    }
 }
