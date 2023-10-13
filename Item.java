@@ -2,7 +2,7 @@ public class Item {
     protected final int num;
     protected final String titulo;
     protected final String materia;
-    protected final int cantidad;
+    protected int cantidad;
     protected String estado;
 
     public Item(int num, String titulo, String materia, int cantidad, String estado) {
@@ -23,6 +23,10 @@ public class Item {
 
     public String getMateria() {
         return materia;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public int getCantidad() {
