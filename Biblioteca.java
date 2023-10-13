@@ -18,6 +18,8 @@ public class Biblioteca {
         String autor;
         String editorial;
         int anio;
+        Item itemb;
+        int contador = 0;
 
         while (salir != 0) {
             printMenu1();
@@ -129,14 +131,64 @@ public class Biblioteca {
 
                     for (Item item : items) {
                         if (num == item.getNum()) {
-
+                            itemb = item;
+                            itemb.toString();
+                            break;
                         }
                     }
 
                     break;
                 case 3:
                     opcion = 0;
+                    contador = 0;
+
+                    System.out.println("Ingrese la materia:");
+                    materia = scanner.nextLine();
+
+                    for (Item item : items) {
+                        if (materia == item.getMateria()) {
+                            contador += 1;
+                        }
+                    }
+
+                    System.out.println("La cantidad de ítems de la materia " + materia + " son: " + contador);
+
                     break;
+
+                case 4:
+                    opcion = 0;
+                    contador = 0;
+
+                    System.out.println("Ingrese la materia:");
+                    materia = scanner.nextLine();
+
+                    for (Item item : items) {
+                        if (item instanceof Revista) {
+                            if (materia == item.getMateria()) {
+                                contador += 1;
+                            }
+                        }
+                    }
+
+                    System.out.println("La cantidad de revistas de la materia " + materia + " son: " + contador);
+
+                    break;
+
+                case 5:
+                    opcion = 0;
+
+                    for (Item item : items) {
+                        if (item instanceof Libro) {
+                            System.out.println("");
+                            item.toString();
+                            System.out.println("");
+                        }
+                    }
+
+                    break;
+
+                case 6:
+                
                 default:
                     System.out.println("");
                     System.out.println("Número inválido. Intente nuevamente.");
@@ -196,7 +248,6 @@ public class Biblioteca {
         System.out.println("1: Libro");
         System.out.println("2: Revista");
         System.out.println("3: Artículo");
-        System.out.println("4: Salir");
         System.out.println("");
         System.out.println("");
     }
