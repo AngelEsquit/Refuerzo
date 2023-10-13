@@ -122,6 +122,17 @@ public class Biblioteca {
                     break;
                 case 2:
                     opcion = 0;
+
+                    System.out.println("Ingrese el número del ítem:");
+                    num = scanner.nextInt();
+                    scanner.nextLine();
+
+                    for (Item item : items) {
+                        if (num == item.getNum()) {
+
+                        }
+                    }
+
                     break;
                 case 3:
                     opcion = 0;
